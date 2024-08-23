@@ -11,6 +11,7 @@
 python simulador.py 1000 > ../dados/dados_sensores.txt
 
 
+
 # Etapa 2 - Apache Kafka
 
 1- Acesse a página do Kafka e faça o download da versão usada no curso conforme mostrado na aula em vídeo.
