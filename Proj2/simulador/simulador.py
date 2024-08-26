@@ -1,15 +1,8 @@
-# Simulador de dados de sensores de movimento em lojas físicas
-
-# Execute o simulador com o comando abaixo:
-
-# python simulador.py 10000 > ../dados/dados_movimento.txt
-
-# Imports
-import re
 import sys
 import random
 import string
 import datetime
+import json  # Importa a biblioteca JSON
 
 # Define o número de mensagens (leituras) que serão geradas
 # Se nenhum valor for informado, vamos gerar apenas 10 registros
@@ -19,7 +12,7 @@ else:
     num_msgs = 10
 
 # Possíveis locais onde os sensores podem estar instalados
-locations = ['Entrada', 'Corredor A', 'Corredor B', 'Caixa', 'Sessão de Eletrônicos', 'Sessão de Roupas']
+locations = ['Corredor_A', 'Corredor_B', 'Caixa', 'Sessao_de_Eletronicos', 'Sessao_de_Roupas']
 
 # Lista de letras do alfabeto em maiúsculo
 letras = string.ascii_uppercase
@@ -58,7 +51,7 @@ if __name__ == "__main__":
         today = datetime.datetime.today()
         timestamp = today.isoformat()
 
-        # Formata e imprime o resultado no formato JSON
+        # Formata os dados do sensor em um dicionário
         sensor_data = {
             "timestamp": timestamp,
             "id_sensor": id_sensor,
@@ -69,6 +62,6 @@ if __name__ == "__main__":
             "traffic_count": traffic_count
         }
 
-        # Imprime o dado formatado como JSON
-        print(re.sub(r"[\s+]", "", str(sensor_data)).replace("'", "\""))
+        # Serializa o dicionário em uma string JSON bem-formada e imprime
+        print(json.dumps(sensor_data))
 
