@@ -1,3 +1,3 @@
-id,name,artists,acousticness,liveness,instrumentalness,energy,danceability,valence
-5OQsiBsky2k2kDKy2bX2eT,Learn to Fly,Foo Fighters,1.83e-05,0.262,2.07e-05,0.919,0.465,0.537
-0wokCRaKD0zPNhMRXAgVsr,Ordinary World,Duran Duran,0.0132,0.14,1.13e-05,0.652,0.473,0.401
+favorite_song,favorite_artist,recommended_song,recommended_artist,similarity_score
+Still Loving You,Scorpions,Cryin',Aerosmith,17.053376900000007
+Still Loving You,Scorpions,Walk This Way,Aerosmith,20.294729800000006
